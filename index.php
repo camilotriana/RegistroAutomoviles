@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>REGISTRO DE VEHICULOS</title>
+        <title>REGISTRO DE VEHICULOS CAMILO</title>
         <link rel="stylesheet" href="./styles/principal.css" title="estilo1">
     </head>
     <body id="bod">
