@@ -28,7 +28,7 @@
             $sybase = "select *from vehiculo";
             $consultando = odbc_exec($con, $sybase);
             $conexion = oci_connect("SYSTEM", "oracle","10.57.5.98/XE")or die("La contraseña espira en 6 dias");
-//            $conexion = oci_connect("SYSTEM", "oracle");
+//            $conexion = oci_connect("SYSTEM", "oracle"); Use este si la base de datos esta en el mismo servidor
             $registro = "SELECT *FROM VEHICULO";
 //            $registro = "SELECT *FROM SYS.VEHICULO";
             $oracle = oci_parse($conexion, $registro);

@@ -36,7 +36,7 @@ $validacion = (strlen($marca)*strlen($modelo)*strlen($matricula)*strlen($placa)*
                *strlen($motor)*strlen($chasis));
 
 if($validacion!=0){
-    //AGREGAMOS EN ORACLE
+    //AGREGAMOS LOS DATOS EN LA BASE DE DATOS DE ORACLE
     $registro = "INSERT INTO VEHICULO VALUES('$placa','$motor','$chasis')";
    // $registro = "INSERT INTO SYS.VEHICULO VALUES('$placa','$motor','$chasis')";
     $oracle = oci_parse($conexion, $registro);
@@ -47,7 +47,7 @@ if($validacion!=0){
     oci_free_statement($oracle); 
     
     
-    //AGREGAMOS EN SYBASE
+    //AGREGAMOS LOS DATOS EN LA BASE DE DATOS DE SYBASE
     $sybase = "insert into vehiculo values('$marca','$modelo','$matricula','$placa')";
     odbc_exec($con, $sybase) or die("<br><script type='text/javascript'>
         alert('Error Placa existente');
